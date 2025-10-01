@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: url("assets/background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  overflow: hidden;
+}
+
+/* Estrelas e Lua */
+.estrela, .lua {
+  position: absolute;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.5s ease;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.estrela {
+  width: 70px;
+  height: 70px;
+  background: white;
+  clip-path: polygon(
+    50% 0%, 61% 35%, 98% 35%, 
+    68% 57%, 79% 91%, 50% 70%, 
+    21% 91%, 32% 57%, 2% 35%, 
+    39% 35%
+  );
+  filter: drop-shadow(0 0 10px white);
+  animation: piscar 2s infinite alternate;
+}
+
+.estrela:active {
+  transform: scale(1.2);
+  background: rgb(209, 209, 133);
+}
+
+.lua {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 50%, whitesmoke 60%, #1d1d1d 61%);
+  box-shadow: 0 0 20px 3px whitesmoke;
+}
+
+.lua:active {
+  transform: scale(1.2);
+}
+
+/* Texto */
+.texto {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  text-align: justify;
+  color: whitesmoke;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 1.5vh;
+  z-index: 1000;
+  display: none;
+
+  font-family: "Nunito, 'Courier New', monospace";
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+
+/* Player de música */
+.music-player {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 280px;
+  background: transparent;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 999;
+}
+
+.music-player .controls {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.music-player .controls button {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid white;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.music-player .controls button:active {
+  transform: scale(1.2);
+  box-shadow: 0 0 12px rgba(255,255,255,0.7);
+}
+
+.music-player .controls svg {
+  width: 50px;
+  height: 50px;
+  fill: white;
+  pointer-events: none;
+}
+
+/* Animações */
+@keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
+@keyframes piscar { from {opacity: 1;} to {opacity: 0.4;} }
+
+/* Responsividade */
+@media (min-width: 1080px) {
+  .texto {
+    font-size: 28px;
+  }
+}

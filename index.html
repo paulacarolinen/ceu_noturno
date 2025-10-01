@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Céu Noturno - Carla</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Monaspace+Neon:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <!-- Estrelas -->
+  <div class="estrela" style="top: 45%; left: 20%;" onclick="mostrarTexto('Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing.')"></div>
+  <div class="estrela" style="top: 48%; left: 77%;" onclick="mostrarTexto('Frase2')"></div>
+  <div class="estrela" style="top: 43%; left: 87%;" onclick="mostrarTexto('Frase3')"></div>
+  <div class="estrela" style="top: 85%; left: 75%;" onclick="mostrarTexto('Frase4')"></div>
+  <div class="estrela" style="top: 88%; left: 87%;" onclick="mostrarTexto('Frase5')"></div>
+  <div class="estrela" style="top: 65%; left: 55%;" onclick="mostrarTexto('Frase6')"></div>
+  <div class="estrela" style="top: 71%; left: 23%;" onclick="mostrarTexto('Frase7')"></div>
+  <div class="estrela" style="top: 73%; left: 1%;" onclick="mostrarTexto('Frase8')"></div>
+
+  <!-- Lua -->
+  <div class="lua" style="top: 30%; left: 60%;" onclick="mostrarTexto('Frase Lua')"></div>
+
+  <!-- Caixa de texto tipo header -->
+  <div id="texto" class="texto"></div>
+
+  <!-- Player de música -->
+  <div class="music-player">
+    <audio id="player" src="assets/videogames.mp3"></audio>
+    <div class="controls">
+      <!-- Botão Anterior -->
+      <button id="prev">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M11 19V5l-9 7 9 7zm2 0h2V5h-2v14z"/>
+        </svg>
+      </button>
+      
+      <!-- Botão Play/Pause -->
+      <button id="play">
+        <svg id="icon-play" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M8 5v14l11-7z"/>
+        </svg>
+      </button>
+      
+      <!-- Botão Próxima -->
+      <button id="next">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M13 5v14l9-7-9-7zm-2 0H9v14h2V5z"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
