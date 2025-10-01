@@ -116,9 +116,84 @@ body {
 @keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
 @keyframes piscar { from {opacity: 1;} to {opacity: 0.4;} }
 
-/* Responsividade */
-@media (min-width: 1080px) {
+/* Celulares menores */
+
+@media (max-width: 480px) {
   .texto {
-    font-size: 28px;
+    font-size: 12px;
+    padding: 10px;
+  }
+  .estrela {
+    width: 35px;
+    height: 35px;
+  }
+  .lua {
+    width: 80px;
+    height: 80px;
+  }
+  .music-player {
+    width: 200px;
+  }
+  .music-player .controls button {
+    width: 50px;
+    height: 50px;
+  }
+  .music-player .controls svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* Tablet */
+
+@media (min-width: 768px) and (max-width: 1079px) {
+  .texto {
+    font-size: 18px;
+  }
+  .estrela {
+    width: 60px;
+    height: 60px;
+  }
+  .lua {
+    width: 120px;
+    height: 120px;
+  }
+  .music-player {
+    width: 260px;
+  }
+  .music-player .controls button {
+    width: 65px;
+    height: 65px;
+  }
+  .music-player .controls svg {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+/* Desktop */
+
+@media (min-width: 1080px) and (max-width: 1600px) {
+  .texto {
+    font-size: 22px;
+  }
+  .estrela {
+    width: 70px;
+    height: 70px;
+  }
+  .lua {
+    width: 150px;
+    height: 150px;
+  }
+  .music-player {
+    width: 280px;
+  }
+  .music-player .controls button {
+    width: 70px;
+    height: 70px;
+  }
+  .music-player .controls svg {
+    width: 50px;
+    height: 50px;
   }
 }
