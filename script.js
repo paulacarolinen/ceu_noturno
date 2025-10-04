@@ -6,7 +6,7 @@ function mostrarTexto(frase) {
 
   setTimeout(() => {
     caixaTexto.style.display = "none";
-  }, 20000);
+  }, 30000);
 }
 
 // Efeito toque estrelas e lua
@@ -31,11 +31,11 @@ lua.addEventListener("touchend", () => { setTimeout(() => { lua.style.transform 
 
 // Player de música
 const playlist = [
-  "assets/videogames.mp3",
-  "assets/algo.mp3",
   "assets/enchanted.mp3",
-  "assets/contramao.mp3",
+  "assets/algo.mp3",
   "assets/fallin.mp3",
+  "assets/contramao.mp3",
+  "assets/videogames.mp3",
   "assets/princesinha.mp3",
   "assets/nothing.mp3",
   "assets/lisboa.mp3",
@@ -75,5 +75,5 @@ document.getElementById("next").addEventListener("click", () => {
   tocarMusica(indiceAtual + 1);
 });
 
-// Toca primeira música ao carregar
-tocarMusica(indiceAtual);
+player.src = playlist[indiceAtual];
+playIcon.innerHTML = '<path d="M8 5v14l11-7z"/>'; // Ícone de "Play"
